@@ -23,5 +23,5 @@ docker push dockerhub_username/image_name:Tag
 
 
 #Follow the link below
-[https://hub.docker.com/repository/docker/louaii/nginx/general](https://hub.docker.com/repository/docker/louaii/nginx/general)
+[View the Nginx image on Docker Hub](https://hub.docker.com/repository/docker/louaii/nginx/general)
 
