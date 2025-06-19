@@ -1,4 +1,4 @@
-# Nginx Docker Quickstart Script
+# Nginx Docker 
 
 Run the following commands to pull the Nginx image, start a container, customize the default web page, commit the changes, and push the image to Docker Hub.
 
