@@ -20,3 +20,8 @@ docker login
 
 # Push the new image to Docker Hub
 docker push dockerhub_username/image_name:Tag
+
+
+#Follow the link below
+[https://hub.docker.com/repository/docker/louaii/nginx/general](https://hub.docker.com/repository/docker/louaii/nginx/general)
+
