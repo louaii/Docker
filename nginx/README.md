@@ -22,9 +22,8 @@ docker login
 docker push dockerhub_username/image_name:Tag
 
 
-#Follow the link below
-
-[View the Nginx image on Docker Hub] (https://hub.docker.com/repository/docker/louaii/nginx/general)
+# Follow the link below
+https://hub.docker.com/repository/docker/louaii/nginx/general
 
 
 
