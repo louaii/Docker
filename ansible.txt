@@ -1,6 +1,0 @@
-ansible-playbook is used to create a single image for many containers(not in same /) to run it ansible-playbook filename.yml
-	to check it same as run command --check
-
-ansible molecule is used for testing and uses two files
-molecule.yml ==> to create 
-converge.yml ==> to deploy
