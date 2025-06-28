@@ -8,18 +8,11 @@ This is a minimal custom Docker image based on Alpine Linux that simply prints a
 FROM alpine
 CMD [ "echo", "hello-world-custom image" ]
 📦 Build the Image
-To build the Docker image, run the following command in the directory containing the Dockerfile:
-
-bash
-Copy
-Edit
+To build the Docker image, run the following command in the directory 
 docker build -t hello-custom .
 🚀 Run the Container
 To run the container and see the output:
 
-bash
-Copy
-Edit
 docker run hello-custom
 📝 Notes
 This image is based on the ultra-lightweight Alpine Linux.
