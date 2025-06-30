@@ -64,3 +64,9 @@ docker rm dotnetapp
  docker commit dotnetapp <username>/dotnetapp
  docker login
  docker push <username>/dotnetapp
+
+# Update on image
+...Update on files as index.cshtml
+dotnet build
+docker build --tag dotnetapp .
+docker run -d -p 8080:8080 --name dotnetapp dotnetapp
