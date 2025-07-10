@@ -54,9 +54,3 @@ docker push username/image
 This image uses multi-stage builds to keep the final image lightweight by only including the built Angular files in an NGINX container.
 
 The production build is served through NGINX on port 80 and exposed via Docker on port 4200.
-
-🐋 Docker Commands Summary
-docker build -t angular .
-docker run -d -p 4200:80 --name angular angular
-docker commit angular louaii/angular
-docker push louaii/angular
