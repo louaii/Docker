@@ -1,0 +1,6 @@
+docker pull MariaDB
+docker volume create mariadb_volume
+docker volume ls
+docker run -d --name mariadb_container1 -e MARIADB_ROOT_PASSWORD=1234 -v mariadb_volume:/var/lib/mysql MariaDB
+docker container ls
+docker exec -it mariadb_container1 bash
