@@ -1,6 +1,18 @@
 docker pull MariaDB
 docker volume create mariadb_volume
 docker volume ls
-docker run -d --name mariadb_container1 -e MARIADB_ROOT_PASSWORD=1234 -v mariadb_volume:/var/lib/mysql MariaDB
+docker run -d --name mariadb_container1 -e MARIADB_ROOT_PASSWORD=1234 -v mariadb_volume:/var/lib/mysql mariadb
 docker container ls
 docker exec -it mariadb_container1 bash
+root@32b8b1fd1c9a:/# mariadb -u root -p
+show databases;
+create database createdby_mariadb_container1;
+exit
+exit
+docker stop mariadb_container1
+docker run -d --name mariadb_container2 -e MARIADB_ROOT_PASSWORD=1234 -v mariadb_volume:/var/lib/mysql mariadb
+docker start mariadb_container2
+docker exec -it mariadb_container2
+mariadb -u root -p
+show databases;
+!containers are synced but need to be turned off when switching from one to other
