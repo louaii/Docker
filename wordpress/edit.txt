@@ -1,0 +1,38 @@
+version: '3'
+services:
+  mysql_database:
+    image: mysql
+    restart: always #in case failure or error occured automatic restart
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: wp_db
+      MYSQL_USER: wp_admin
+      MYSQL_PASSWORD: 1234
+    volumes:
+      - mysql:/var/lib/mysql # "-" to attach many in case needed
+  wordpress:
+    depends_on:
+      - mysql_database
+    image: wordpress
+    restart: always
+    ports:
+      - "8000:80"
+    environment:
+      WORDPRESS_DB_HOST: mysql_database:3306
+      WORDPRESS_DB_USER: wp_admin
+      WORDPRESS_DB_PASSWORD: 1234
+      WORDPRESS_DB_NAME: wp_db
+    volumes:
+      ["./:/var/www/html"]
+  phpmyadmin:
+    depends_on:
+      - mysql_database
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: mysql_database
+      MYSQL_ROOT_PASSWORD: 1234
+volumes:
+  mysql: {}
