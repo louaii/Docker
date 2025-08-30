@@ -58,5 +58,9 @@ check container AccessKeys in Containers Registry
 
 az container show --resource-group DockerAzureGroup --name aci-app-container --query instanceView.state
 
-az container show
+az container show --resource-group DockerAzureGroup --name aci-app-container --query ipAddress.fqdn
+
+az container logs --resource-group DockerAzureGroup --name aci-app-container
+
+az group delete --name DockerAzureGroup  
 
